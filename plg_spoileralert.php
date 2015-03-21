@@ -29,7 +29,9 @@ class plgContentPlg_SpoilerAlert extends JPlugin {
 				
 		$path = JPATH_PLUGINS . str_replace("plugins", "", strstr(realpath(dirname(__FILE__)), 'plugins'));
 		
-		$this->importShortCodeFiles($path);
+		require_once('core/shortcode_include.php');
+		
+		importShortCodeFiles($path);
 
 		$data = do_shortcode(shortcode_unautop($article->text));
 		
@@ -52,24 +54,6 @@ class plgContentPlg_SpoilerAlert extends JPlugin {
 		
 		$article->text = $data;
 	    }
-	}
-    }
-
-    public function importShortCodeFiles($path)
-    {
-	$shortcodes = array();
-
-	$pluginshortcodes = glob($path . '/shortcodes/*.php');
-
-	foreach ((array)$pluginshortcodes as $value) $shortcodes[] = basename($value);
-
-	$shortcodes = array_unique($shortcodes);
-
-	require_once('core/wp_shortcodes.php');
-
-	foreach ($shortcodes as $shortcode)
-	{
-	    require_once('shortcodes/' . $shortcode);
 	}
     }
 

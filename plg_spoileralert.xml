@@ -8,7 +8,7 @@
 	<creationDate>March, 2013</creationDate>
 	<license>MIT License - http://en.wikipedia.org/wiki/MIT_License</license>
 	<version>1.0</version>
-	<description><![CDATA[<div><p>Spoiler Alert</p></div>]]></description>
+	<description></description>
 
 	<files>
 		<filename plugin="plg_spoileralert">plg_spoileralert.php</filename>
