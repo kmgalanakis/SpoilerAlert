@@ -43,7 +43,7 @@ Or just use the Editor Button below the editor area.
 
 ## Credits
 
-*[Joshua Hull](https://github.com/joshbuddy)
+* [Joshua Hull](https://github.com/joshbuddy)
 
 ## License
 
