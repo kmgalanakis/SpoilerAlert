@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="editors-xtd" method="upgrade">
+	<name>Spoiler Alert Editor Button</name>
+	<author>Konstantinos Galanakis</author>
+	<authorEmail>kmgalanakis@gmail.com</authorEmail>
+	<authorUrl>https://github.com/kmgalanakis</authorUrl>
+	<copyright>Copyright (C) 2015 Konstantinos Galanakis. All Rights Reserved</copyright>
+	<creationDate>March, 2013</creationDate>
+	<license>MIT License - http://en.wikipedia.org/wiki/MIT_License</license>
+	<version>1.0</version>
+	<description></description>
+	<description><![CDATA[<div><p>Spoiler Alert Button for Editor</p></div>]]></description>
+    <files>
+        <filename plugin="plg_spoileralertbutton">plg_spoileralertbutton.php</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+        <filename>index.html</filename>
+    </files>
+</extension>

@@ -1,0 +1,16 @@
+/*------------------------------------------------------------------------
+# css/style.css  - Spoiler Alert Editor Button
+  # ------------------------------------------------------------------------
+  # author    Konstantinos Galanakis
+  # copyright Copyright (C) 2015 Konstantinos Galanakis. All Rights Reserved
+  # license   MIT License - http://en.wikipedia.org/wiki/MIT_License
+  # website   https://github.com/kmgalanakis
+  ------------------------------------------------------------------------- */
+
+.button2-left .spoiler {
+    background: url(../images/j_button2_sa.png) 100% 0 no-repeat;
+}
+
+.icon-spoiler:before {
+	content: url(../images/sa.png);
+}

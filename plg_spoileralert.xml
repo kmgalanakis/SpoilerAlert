@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Spoiler Alert</name>
+	<author>Konstantinos Galanakis</author>
+	<authorEmail>kmgalanakis@gmail.com</authorEmail>
+	<authorUrl>https://github.com/kmgalanakis</authorUrl>
+	<copyright>Copyright (C) 2015 Konstantinos Galanakis. All Rights Reserved</copyright>
+	<creationDate>March, 2013</creationDate>
+	<license>MIT License - http://en.wikipedia.org/wiki/MIT_License</license>
+	<version>1.0</version>
+	<description><![CDATA[<div><p>Spoiler Alert</p></div>]]></description>
+
+	<files>
+		<filename plugin="plg_spoileralert">plg_spoileralert.php</filename>
+		<folder>core</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>installation</folder>
+		<folder>js</folder>
+		<folder>shortcodes</folder>		
+		<filename>index.html</filename>
+	</files>
+	
+	<config>
+	    <fields name="params" >
+		<fieldset name="basic">
+		    <field name="partial" type="text" default="2" filter="integer" label="Partial blurs" description="Partial blurs" size="20" />
+		    <field name="max" type="text" default="4" filter="integer" label="Maximum blurs" description="Maximum blurs" size="20" />
+		</fieldset>
+	    </fields>		
+	</config>
+
+	<plugins>
+		<plugin plugin="plg_spoileralertbutton" group="editors-xtd" />
+	</plugins>
+	
+	<scriptfile>installation/script.spoileralert.php</scriptfile>
+</extension>
