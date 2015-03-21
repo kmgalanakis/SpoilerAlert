@@ -6,9 +6,7 @@ As he says, don't spoil it! Hide copy and images with a bit of SVG blur. Taste o
 
 Do you publish spoilers? Do you wish you could have them on your page in a way that wasn't fucking rude? With Spoiler Alert! you can! Hide spoilers with a bit of blur.
 
-But for Joomla. 
-
-Also compatible with K2.
+But for Joomla. Also compatible with K2.
 
 ## Installation
 
@@ -24,9 +22,9 @@ Use by inserting the shortcode in your content (article or K2 item) or in your m
 
 The shortcode should be like:
 
-*[spoiler]This is spoiler text![/spoiler]
-*[spoiler max="50"]This is spoiler text![/spoiler]
-*[spoiler partial="5" max="10"]This is spoiler text![/spoiler]
+* [spoiler]This is spoiler text![/spoiler]
+* [spoiler max="50"]This is spoiler text![/spoiler]
+* [spoiler partial="5" max="10"]This is spoiler text![/spoiler]
 
 Or just use the Editor Button below the editor area.
 
@@ -41,7 +39,7 @@ Or just use the Editor Button below the editor area.
 
 ## History
 
-*v0.1 - Initial commit
+* v0.1 - Initial commit
 
 ## Credits
 
