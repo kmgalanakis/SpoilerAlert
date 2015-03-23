@@ -98,10 +98,10 @@
     * @param callable $func Hook to run when shortcode is found.
     */
 	
-	//no direct accees
-    defined ('_JEXEC') or die('resticted aceess');
-	
-	if (!function_exists('add_shortcode')) {
+   //no direct accees
+defined('_JEXEC') or die('resticted aceess');
+
+if (!function_exists('add_shortcode')) {
 		function add_shortcode($tag, $func) {
 			global $helix;
 

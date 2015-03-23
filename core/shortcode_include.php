@@ -1,4 +1,6 @@
 <?php
+//no direct accees
+defined('_JEXEC') or die('resticted aceess');
 
 function importShortCodeFiles($path)
 {
@@ -15,6 +17,6 @@ function importShortCodeFiles($path)
 
     foreach ($shortcodes as $shortcode)
     {
-	require_once(__DIR__.'/../shortcodes/' . $shortcode);
+	require_once(__DIR__ . '/../shortcodes/' . $shortcode);
     }
 }
