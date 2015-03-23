@@ -1,12 +1,5 @@
 <?php
-/*------------------------------------------------------------------------
-# shortcodes/spoiler.php - Spoiler Alert
-# ------------------------------------------------------------------------
-# author    Konstantinos Galanakis
-# copyright Copyright (C) 2015 Konstantinos Galanakis. All Rights Reserved
-# license   MIT License - http://en.wikipedia.org/wiki/MIT_License
-# website   https://github.com/kmgalanakis
--------------------------------------------------------------------------*/
+/*@@phpsig@@*/
 
 //no direct accees
 defined ('_JEXEC') or die('resticted aceess');

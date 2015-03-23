@@ -1,4 +1,6 @@
 <?php
+/*@@phpsig@@*/
+
 //no direct accees
 defined('_JEXEC') or die('resticted aceess');
 

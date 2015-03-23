@@ -1,13 +1,5 @@
 <?php
-/* ------------------------------------------------------------------------
-  # plg_spoileralert.php - Spoiler Alert Content Plugin
-  # ------------------------------------------------------------------------
-  # author    Konstantinos Galanakis
-  # copyright Copyright (C) 2015 Konstantinos Galanakis. All Rights Reserved
-  # license   MIT License - http://en.wikipedia.org/wiki/MIT_License
-  # website   https://github.com/kmgalanakis
-  ------------------------------------------------------------------------- */
-
+/*@@phpsig@@*/
 
 defined('_JEXEC') or die;
 

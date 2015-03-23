@@ -1,13 +1,6 @@
 
 <?php
-/*------------------------------------------------------------------------
-# plg_spoileralertbutton.php - Spoiler Alert Editor Button
-# ------------------------------------------------------------------------
-# author    Konstantinos Galanakis
-# copyright Copyright (C) 2015 Konstantinos Galanakis. All Rights Reserved
-# license   MIT License - http://en.wikipedia.org/wiki/MIT_License
-# website   https://github.com/kmgalanakis
-------------------------------------------------------------------------- */
+/*@@phpsig@@*/
 
 defined('_JEXEC') or die;
 class plgButtonPlg_SpoilerAlertButton extends JPlugin
