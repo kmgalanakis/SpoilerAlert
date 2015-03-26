@@ -1,13 +1,5 @@
 <?php
- #-------------------------------------------------------------------------- 
- # Spoiler Alert Content Plugin 
- # ------------------------------------------------------------------------- 
- # version   0.2 
- # date      26 March 2015 
- # author    Konstantinos Galanakis - https://github.com/kmgalanakis 
- # copyright Copyright (C) 2015 Konstantinos Galanakis. All Rights Reserved 
- # license   GNU/GPL license v2: https://www.gnu.org/licenses/gpl-2.0.html 
- #--------------------------------------------------------------------------
+/* @@phpsig@@ */
 
 // No Direct Access
 defined('_JEXEC') or die;
@@ -115,8 +107,12 @@ class plgContentPlg_SpoilerAlertInstallerScript {
 	$rows = 0;
 
 	?>
-
 	<script type="text/javascript">
+	//	    var jq = jQuery.noConflict();
+	//	    jq(document).ready(function () {
+	//		jq('.span12').prev().hide();
+	//		jq([tr]).prev().hide();
+	//	    });
 	    var targetDivJ25 = document.querySelectorAll(".adminform tr")[0];
 	    if (typeof targetDivJ25 !== 'undefined') {
 		targetDivJ25.style.display = 'none';
@@ -125,8 +121,27 @@ class plgContentPlg_SpoilerAlertInstallerScript {
 	    if (typeof targetDivJ30 !== 'undefined') {
 		targetDivJ30.style.display = 'none';
 	    }
+	//	    function fn()
+	//	    {
+	//		var targetDivJ25 = document.querySelectorAll(".adminform tr")[0];
+	//		if (typeof targetDivJ25 !== 'undefined') {
+	//		    targetDivJ25.style.display = 'none';
+	//		}
+	//		var targetDivJ30 = document.querySelectorAll("#j-main-container .span12")[0];
+	//		if (typeof targetDivJ30 !== 'undefined') {
+	//		    targetDivJ30.style.display = 'none';
+	//		}
+	//		
+	//	    }
+	//	    function ready(fn) {
+	//		if (document.readyState != 'loading') {
+	//		    fn();
+	//		} else {
+	//		    document.addEventListener('DOMContentLoaded', fn);
+	//		}
+	//	    }
+	//	    ready(fn);
 	</script>
-	
 	<!--<img src="<?php //echo JURI::root(true);           ?>/plugins/content/incptvtweetable/images/incptvtweetable173x48.jpg" alt="Inceptive Tweetable" align="right" />-->
 	<?php echo ($action == "install") ? "<h2>" . JText::_('PLG_INSTALLATION_INST_STATUS') . "</h2>" : "<h2>" . JText::_('PLG_INSTALLATION_UNINST_STATUS') . "</h2>"; ?>
 	<div>

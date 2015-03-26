@@ -1,7 +1,7 @@
 /* #-------------------------------------------------------------------------- 
  # Spoiler Alert Content Plugin 
  # ------------------------------------------------------------------------- 
- # version   ${extension.version} 
+ # version   0.2 
  # date      26 March 2015 
  # author    Konstantinos Galanakis - https://github.com/kmgalanakis 
  # copyright Copyright (C) 2015 Konstantinos Galanakis. All Rights Reserved 
