@@ -5,10 +5,10 @@
     <authorEmail>kmgalanakis@gmail.com</authorEmail>
     <authorUrl>https://github.com/kmgalanakis</authorUrl>
     <copyright>Copyright (C) 2015 Konstantinos Galanakis. All Rights Reserved</copyright>
-    <creationDate>/*@@date@@*/</creationDate>
+    <creationDate>26 March 2015</creationDate>
     <license>GNU/GPL license v2: https://www.gnu.org/licenses/gpl-2.0.html</license>
-    <version>/*@@version@@*/</version>
-    <description></description>
+    <version>${extension.version}</version>
+    <description>PLG_DESCRIPTION</description>
 
     <files>
 	<filename plugin="plg_spoileralert">plg_spoileralert.php</filename>
@@ -17,6 +17,7 @@
 	<folder>images</folder>
 	<folder>installation</folder>
 	<folder>js</folder>
+	<folder>language</folder>
 	<folder>shortcodes</folder>		
 	<filename>index.html</filename>
     </files>

@@ -1,5 +1,13 @@
 <?php
-/*@@phpsig@@*/
+ #-------------------------------------------------------------------------- 
+ # Spoiler Alert Content Plugin 
+ # ------------------------------------------------------------------------- 
+ # version   ${extension.version} 
+ # date      26 March 2015 
+ # author    Konstantinos Galanakis - https://github.com/kmgalanakis 
+ # copyright Copyright (C) 2015 Konstantinos Galanakis. All Rights Reserved 
+ # license   GNU/GPL license v2: https://www.gnu.org/licenses/gpl-2.0.html 
+ #--------------------------------------------------------------------------
 
 // No Direct Access
 defined('_JEXEC') or die;
@@ -14,19 +22,6 @@ class plgContentPlg_SpoilerAlertInstallerScript {
 
     function __construct()
     {
-	$this->description = '<p>'
-		. '<a href="https://github.com/kmgalanakis/SpoilerAlert" title="Spoiler Alert">Spoiler Alert</a> by <a href="https://github.com/kmgalanakis" title="Konstantinos Galanakis">Konstantinos Galanakis</a>  is a Joomla Conten Plugin based on a jQuery plugin, developed by Joshua Hull, that create spoiler alerts by bluring the desired parts of your page.<br />'
-		. '</p>'
-		. '<p>'
-		. 'As he says, don\'t spoil it! Hide copy and images with a bit of SVG blur. Taste on mouseover. Eat on click.'
-		. '</p>'
-		. '<p>'
-		. 'Do you publish spoilers? Do you wish you could have them on your page in a way that wasn\'t fucking rude? With Spoiler Alert! you can! Hide spoilers with a bit of blur.'
-		. '</p>'
-		. '<p>'
-		. 'But for Joomla. Also compatible with K2.'
-		. '</p>';
-
 	$this->extensionName = "plg_spoileralert";
 	$this->humanReadableName = "Spoiler Alert";
 	$this->additionalPlugins = array('plg_spoileralertbutton' => "Spoiler Alert Editor Button");
@@ -64,7 +59,7 @@ class plgContentPlg_SpoilerAlertInstallerScript {
 	    $status->plugins[] = array('name' => $name, 'group' => $group, 'result' => $result);
 	}
 	//echo "<p>Installed</p>";
-	$this->results($status, "install");
+	$this->results($status, $parent, "install");
     }
 
     function uninstall($parent)
@@ -91,38 +86,57 @@ class plgContentPlg_SpoilerAlertInstallerScript {
 		$status->plugins[] = array('name' => $name, 'group' => $group, 'result' => $result);
 	    }
 	}
-	$this->results($status, "uninstall");
+	$this->results($status, $parent, "uninstall");
     }
 
-    private function results($status, $action)
+    private function results($status, $parent, $action)
     {
+	$type = (array)$parent->getParent()->manifest->attributes()->type;
+	$group = (array)$parent->getParent()->manifest->attributes()->group;
+
 	$language = JFactory::getLanguage();
-	$languagePath = JPATH_PLUGINS . 'DS' . 'content' . 'DS' . "$this->extensionName";
+	$languagePath = $parent->getParent()->getPath('extension_root');
+	$language->load('installation', $languagePath);
+	$language->load('plg_content_plg_spoileralert', $languagePath);
+
+	$this->description = JText::_('PLG_DESCRIPTION');
 
 	if ($action == "install")
 	{
-	    $resultTrue = "Installed";
-	    $resultFalse = "Not installed";
+	    $resultTrue = JText::_('PLG_INSTALLATION_INSTALLED');
+	    $resultFalse = JText::_('PLG_INSTALLATION_NOT_INSTALLED');
 	}
 	else
 	{
-	    $resultTrue = "Unistalled";
-	    $resultFalse = "Not unistalled";
+	    $resultTrue = JText::_('PLG_INSTALLATION_UNINSTALLED');
+	    $resultFalse = JText::_('PLG_INSTALLATION_NOT_UNINSTALLED');
 	}
 
 	$rows = 0;
 
 	?>
-	<!--<img src="<?php //echo JURI::root(true);    ?>/plugins/content/incptvtweetable/images/incptvtweetable173x48.jpg" alt="Inceptive Tweetable" align="right" />-->
-	<?php echo ($action == "install") ? "<h2>Installation status</h2>" : "<h2>Uninstallation status</h2>"; ?>
+
+	<script type="text/javascript">
+	    var targetDivJ25 = document.querySelectorAll(".adminform tr")[0];
+	    if (typeof targetDivJ25 !== 'undefined') {
+		targetDivJ25.style.display = 'none';
+	    }
+	    var targetDivJ30 = document.querySelectorAll("#j-main-container .span12")[0];
+	    if (typeof targetDivJ30 !== 'undefined') {
+		targetDivJ30.style.display = 'none';
+	    }
+	</script>
+	
+	<!--<img src="<?php //echo JURI::root(true);           ?>/plugins/content/incptvtweetable/images/incptvtweetable173x48.jpg" alt="Inceptive Tweetable" align="right" />-->
+	<?php echo ($action == "install") ? "<h2>" . JText::_('PLG_INSTALLATION_INST_STATUS') . "</h2>" : "<h2>" . JText::_('PLG_INSTALLATION_UNINST_STATUS') . "</h2>"; ?>
 	<div>
 	    <?php echo $this->description; ?>
 	</div>
 	<table class="adminlist table table-striped">
 	    <thead>
 		<tr>
-		    <th class="title" colspan="2">Extension</th>
-		    <th width="30%">Status</th>
+		    <th class="title" colspan="2"><?php echo JText::_('PLG_INSTALLATION_EXTENSION'); ?></th>
+		    <th width="30%"><?php echo JText::_('PLG_INSTALLATION_STATUS'); ?></th>
 		</tr>
 	    </thead>
 	    <tfoot>
@@ -132,14 +146,14 @@ class plgContentPlg_SpoilerAlertInstallerScript {
 	    </tfoot>
 	    <tbody>
 		<tr>
-		    <th>Plugin</th>
-		    <th>Group</th>
+		    <th><?php echo JText::_('PLG_INSTALLATION_' . strtoupper($type[0])); ?></th>
+		    <th><?php echo JText::_('PLG_INSTALLATION_GROUP'); ?></th>
 		    <th></th>
 		</tr>
 		<tr class="row0">
 		    <td class="key"><?php echo $this->humanReadableName; ?></td>
-		    <td class="key">Content</td>
-		    <td><strong>Installed</strong></td>
+		    <td class="key"><?php echo JText::_('PLG_INSTALLATION_GROUP_' . strtoupper($group[0])); ?></td>
+		    <td><strong><?php echo JText::_('PLG_INSTALLATION_' . strtoupper($action) . 'ED'); ?></strong></td>
 		</tr>
 		<?php if (count($status->plugins)): ?>
 		    <?php foreach ($status->plugins as $plugin): ?>

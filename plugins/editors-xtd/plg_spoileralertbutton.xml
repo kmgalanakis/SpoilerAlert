@@ -5,9 +5,9 @@
     <authorEmail>kmgalanakis@gmail.com</authorEmail>
     <authorUrl>https://github.com/kmgalanakis</authorUrl>
     <copyright>Copyright (C) 2015 Konstantinos Galanakis. All Rights Reserved</copyright>
-    <creationDate>/*@@date@@*/</creationDate>
+    <creationDate>26 March 2015</creationDate>
     <license>GNU/GPL license v2: https://www.gnu.org/licenses/gpl-2.0.html</license>
-    <version>/*@@version@@*/</version>
+    <version>${extension.version}</version>
     <description></description>
     <description><![CDATA[<div><p>Spoiler Alert Button for Editor</p></div>]]></description>
     <files>
